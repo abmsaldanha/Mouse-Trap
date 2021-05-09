@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "872331998695",
+    "project_id": "mouse-trap-cb0a7",
+    "storage_bucket": "mouse-trap-cb0a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872331998695:android:f88d87eba7d71e8a1df942",
+        "android_client_info": {
+          "package_name": "com.mousetrapapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872331998695-0a9a2ahq0fg2spgetk9ekf1bst7jjkuf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBctXpkUgrcneMTjGCFZW1ixmxlZiiB5_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872331998695-0a9a2ahq0fg2spgetk9ekf1bst7jjkuf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
