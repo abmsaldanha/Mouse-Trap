@@ -35,15 +35,20 @@ public class TrapAdapter extends ArrayAdapter<TrapStatus> {
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.image);
 
+        TextView txtName = (TextView) convertView.findViewById(R.id.txtName);
+
         TextView txtStatus = (TextView) convertView.findViewById(R.id.txtStatus);
 
         TextView txtDate = (TextView) convertView.findViewById(R.id.txtDate);
 
-        imageView.setImageResource(getItem(position).getImage());
+        imageView.setImageResource(getItem(position).getCageImage());
+
+        txtName.setText(getItem(position).getName());
 
         txtStatus.setText(getItem(position).getStatus());
 
-        txtDate.setText(getItem(position).getDate().toString());
+        String date = "Last Move: " + getItem(position).getDate();
+        txtDate.setText(date);
 
         return convertView;
     }

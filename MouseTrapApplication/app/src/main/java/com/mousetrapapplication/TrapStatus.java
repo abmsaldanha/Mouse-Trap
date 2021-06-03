@@ -1,25 +1,31 @@
 package com.mousetrapapplication;
 
-import java.time.LocalDate;
-
 public class TrapStatus {
-    int image;
-    LocalDate date;
-    String status;
+    private int statusImage;
+    private String databaseReference;
+    private int cageImage;
+    private String name;
+    private String date;
+    private String status;
+
 
     public TrapStatus() {}
 
-    public TrapStatus(int image, LocalDate date, String status) {
-        this.image = image;
+    public TrapStatus(int statusImage, String date, String status, String name) {
+        this.statusImage = statusImage;
         this.date = date;
         this.status = status;
+        this.name = name;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+
+    // SETTERS
+
+    public void setStatusImage(int statusImage) {
+        this.statusImage = statusImage;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -27,7 +33,18 @@ public class TrapStatus {
         this.status = status;
     }
 
-    public LocalDate getDate() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDatabaseReference(String reference) { this.databaseReference = reference; }
+
+    public void setCageImage(int cageImage) { this.cageImage = cageImage; }
+
+
+    // GETTERS
+
+    public String getDate() {
         return date;
     }
 
@@ -35,5 +52,13 @@ public class TrapStatus {
         return status;
     }
 
-    public int getImage() { return image; }
+    public int getStatusImage() { return statusImage; }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDatabaseReference() { return databaseReference; }
+
+    public int getCageImage() { return cageImage; }
 }
