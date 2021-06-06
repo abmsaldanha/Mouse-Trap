@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#D8D4D3"
+    tools:context="com.mousetrapapplication.DisplayTrapActivity">
+
+    <Button
+        android:id="@+id/buttonTakePicture"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="SHOW MOUSE TRAP"
+        android:textSize="25dp"
+        android:backgroundTint="#EFFF98"
+        android:textColor="#7D7D7D"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536" />
+
+    <TextView
+        android:id="@+id/textDateLastMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="DATE"
+        android:textColor="#FF5733"
+        android:textSize="36sp"
+        android:layout_below="@+id/textLastMove" />
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/textDateLastMove"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@color/purple_500" />
+
+    <TextView
+        android:id="@+id/textLastMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/buttonTakePicture"
+        android:text="Last move:"
+        android:textColor="#581845"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/picture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="OPEN/CLOSED"
+        android:textColor="#FF5440"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536" />
+
+    <Button
+        android:id="@+id/buttonOpenClose"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/textStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="OPEN/CLOSE"
+        android:textSize="30dp"
+        android:backgroundTint="@android:color/background_light"
+        android:textColor="@android:color/holo_orange_light"  />
+</RelativeLayout>
