@@ -2,7 +2,7 @@
 
 
 const int pinoServo = 6;  //PINO DIGITAL UTILIZADO PELO SERVO  
-//const int inputPin = 2; //PINO DIGITAL UTILIZADO PELO Sensor
+const int inputPin = 2; //PINO DIGITAL UTILIZADO PELO Sensor
 
 Servo s; //OBJETO DO TIPO SERVO
 int pos; //POSIÇÃO DO SERVO
