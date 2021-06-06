@@ -23,6 +23,8 @@ void setup (){
   pinMode(inputPin, INPUT);       // declare sensor as input
   s.attach(pinoServo);            //ASSOCIAÇÃO DO PINO DIGITAL AO OBJETO DO TIPO SERVO
   s.write(0);                     //INICIA O MOTOR NA POSIÇÃO 0º
+
+  delay(2000);
 }
 
 void ClearBuffer(){
