@@ -20,7 +20,7 @@ float totalTime = 0;              //contador de tempo (retorna a 0 se >=10)
 
 void setup (){
   Serial.begin(9600);
-  //pinMode(inputPin, INPUT);     // declare sensor as input
+  pinMode(inputPin, INPUT);       // declare sensor as input
   s.attach(pinoServo);            //ASSOCIAÇÃO DO PINO DIGITAL AO OBJETO DO TIPO SERVO
   s.write(0);                     //INICIA O MOTOR NA POSIÇÃO 0º
 }
@@ -99,7 +99,7 @@ void closeDoor(){
   Serial.println("close");
   for(pos = 0; pos < 180; pos++){                       //PARA "pos" IGUAL A 0, ENQUANTO "pos" MENOR QUE 180, INCREMENTA "pos"
     s.write(pos);                                       //ESCREVE O VALOR DA POSIÇÃO QUE O SERVO DEVE GIRAR
-    delay(5);                                          //INTERVALO DE 15 MILISSEGUNDOS
+    delay(5);                                           //INTERVALO DE 15 MILISSEGUNDOS
   }
   delay(5000);
 }
@@ -109,7 +109,7 @@ void openDoor(){
   if( !isOpen()){
     for(pos = 180; pos >= 0; pos--){                    //PARA "pos" IGUAL A 180, ENQUANTO "pos" MAIOR OU IGUAL QUE 0, DECREMENTA "pos"
       s.write(pos);                                     //ESCREVE O VALOR DA POSIÇÃO QUE O SERVO DEVE GIRAR
-      delay(5);                                        //INTERVALO DE 15 MILISSEGUNDOS
+      delay(5);                                         //INTERVALO DE 15 MILISSEGUNDOS
     }
   }
 
