@@ -34,12 +34,12 @@ bool toggle = true;
 
 void loop() {
   
-  /*
+  
   if(isOpen()){
     val = digitalRead(inputPin);  // read input value
   }
-  */
-  if (/*val == HIGH*/toggle && !motionDetected && isOpen()) {            // check if the input is HIGH
+  
+  if (val == HIGH /*toggle*/ && !motionDetected && isOpen()) {            // check if the input is HIGH
     toggle = false;
     
     Serial.println("detected");
@@ -99,7 +99,7 @@ void closeDoor(){
   Serial.println("close");
   for(pos = 0; pos < 180; pos++){                       //PARA "pos" IGUAL A 0, ENQUANTO "pos" MENOR QUE 180, INCREMENTA "pos"
     s.write(pos);                                       //ESCREVE O VALOR DA POSIÇÃO QUE O SERVO DEVE GIRAR
-    delay(15);                                          //INTERVALO DE 15 MILISSEGUNDOS
+    delay(5);                                          //INTERVALO DE 15 MILISSEGUNDOS
   }
   delay(5000);
 }
@@ -109,7 +109,7 @@ void openDoor(){
   if( !isOpen()){
     for(pos = 180; pos >= 0; pos--){                    //PARA "pos" IGUAL A 180, ENQUANTO "pos" MAIOR OU IGUAL QUE 0, DECREMENTA "pos"
       s.write(pos);                                     //ESCREVE O VALOR DA POSIÇÃO QUE O SERVO DEVE GIRAR
-      delay(15);                                        //INTERVALO DE 15 MILISSEGUNDOS
+      delay(5);                                        //INTERVALO DE 15 MILISSEGUNDOS
     }
   }
 
